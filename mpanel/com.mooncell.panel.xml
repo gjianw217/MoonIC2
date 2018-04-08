@@ -1,0 +1,47 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="com.mooncell.panel.interface">
+    <method name="setLed">
+      <arg type="b" direction="out"/>
+      <arg name="on1off0" type="y" direction="in"/>
+      <arg name="index" type="y" direction="in"/>
+    </method>
+    <method name="setBz">
+      <arg type="b" direction="out"/>
+      <arg name="on1off0" type="y" direction="in"/>
+      <arg name="hz" type="y" direction="in"/>
+    </method>
+    <method name="setLcd">
+      <arg type="b" direction="out"/>
+      <arg name="x" type="y" direction="in"/>
+      <arg name="y" type="y" direction="in"/>
+      <arg name="data" type="ay" direction="in"/>
+    </method>
+    <method name="setLcdLine">
+      <arg type="b" direction="out"/>
+      <arg name="y" type="y" direction="in"/>
+      <arg name="data" type="ay" direction="in"/>
+    </method>
+    <method name="setLcdClear">
+      <arg type="b" direction="out"/>
+    </method>
+    <method name="setLcdClearLine">
+      <arg type="b" direction="out"/>
+      <arg name="y" type="y" direction="in"/>
+    </method>
+    <method name="setLcdFull">
+      <arg type="b" direction="out"/>
+      <arg name="data" type="y" direction="in"/>
+    </method>
+    <method name="setLcdFullLine">
+      <arg type="b" direction="out"/>
+      <arg name="y" type="y" direction="in"/>
+      <arg name="data" type="y" direction="in"/>
+    </method>
+    <method name="setLcdPos">
+      <arg type="b" direction="out"/>
+      <arg name="on1off0" type="y" direction="in"/>
+      <arg name="pos" type="y" direction="in"/>
+    </method>
+  </interface>
+</node>

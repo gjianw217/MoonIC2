@@ -1,0 +1,93 @@
+# depslib dependency file v1.0
+1461378204 source:/home/monkey/jone/net2spi/main.cpp
+	<iostream>
+	"mcontrol.h"
+	<signal.h>
+	"mspi.h"
+	"mnet.h"
+	"mconfig.h"
+
+1461374327 /home/monkey/jone/net2spi/mcontrol.h
+	"mthread.h"
+	"stdio.h"
+	"string.h"
+	<iostream>
+	"mspi.h"
+	"mconfig.h"
+
+1461374331 /home/monkey/jone/net2spi/mthread.h
+	<pthread.h>
+	<unistd.h>
+
+1461496426 /home/monkey/jone/net2spi/mspi.h
+	<pthread.h>
+	<iostream>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<stdio.h>
+	<signal.h>
+	<stdlib.h>
+	<unistd.h>
+	"string.h"
+	"mconfig.h"
+
+1461374331 /home/monkey/jone/net2spi/mconfig.h
+
+1461497254 /home/monkey/jone/net2spi/mnet.h
+	<stdio.h>
+	<iostream>
+	<cstdio>
+	<string>
+	<cstring>
+	<stdlib.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<string.h>
+	<time.h>
+	<linux/errno.h>
+	<err.h>
+	<error.h>
+	<errno.h>
+	<netdb.h>
+	<linux/socket.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<sys/types.h>
+	<netinet/tcp.h>
+	<unistd.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<signal.h>
+	"mspi.h"
+	"mcontrol.h"
+	"mthread.h"
+	"mnetprotocol.h"
+	"mconfig.h"
+
+1461496426 /home/monkey/jone/net2spi/mnetprotocol.h
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+
+1461374331 source:/home/monkey/jone/net2spi/mcontrol.cpp
+	"mcontrol.h"
+
+1461379557 source:/home/monkey/jone/net2spi/mnet.cpp
+	"mnet.h"
+	"mnet_p.h"
+	<sys/time.h>
+
+1461374331 /home/monkey/jone/net2spi/mnet_p.h
+
+1461374331 source:/home/monkey/jone/net2spi/mnetprotocol.cpp
+	"mnetprotocol.h"
+
+1461378204 source:/home/monkey/jone/net2spi/mspi.cpp
+	"mspi.h"
+
+1461374331 source:/home/monkey/jone/net2spi/mthread.cpp
+	"mthread.h"
+

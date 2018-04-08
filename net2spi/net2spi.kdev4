@@ -1,0 +1,4 @@
+[Project]
+Name=net2spi
+Manager=KDevCMakeManager
+VersionControl=kdevgit

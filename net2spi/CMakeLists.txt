@@ -1,0 +1,30 @@
+project(net2spi)
+cmake_minimum_required(VERSION 2.4)
+set(__ARM__AM335X__ 1) 
+if(__ARM__AM335X__)
+	message("building to arm")
+	SET(CMAKE_FIND_ROOT_PATH "/home/monkey/devkit8600/tools/arm-2009q1/arm-none-linux-gnueabi")
+	SET(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+	SET(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+	SET(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+	set(CMAKE_C_COMPILER "/home/monkey/devkit8600/tools/arm-2009q1/bin/arm-none-linux-gnueabi-gcc")
+	set(CMAKE_CXX_COMPILER "/home/monkey/devkit8600/tools/arm-2009q1/bin/arm-none-linux-gnueabi-g++")
+	set(CMAKE_AR "/home/monkey/devkit8600/tools/arm-2009q1/bin/arm-none-linux-gnueabi-ar")
+	set(CMAKE_LD "/home/monkey/devkit8600/tools/arm-2009q1/bin/arm-none-linux-gnueabi-ld")
+	set(CMAKE_NM "/home/monkey/devkit8600/tools/arm-2009q1/bin/arm-none-linux-gnueabi-nm")
+	set(CMAKE_STRIP "/home/monkey/devkit8600/tools/arm-2009q1/bin/arm-none-linux-gnueabi-strip")
+
+	SET(LIBRARIES librt.so)
+
+	LINK_DIRECTORIES("/home/monkey/devkit8600/tools/arm-2009q1/arm-none-linux-gnueabi/libc/lib")
+	LINK_LIBRARIES(rt)
+	LINK_LIBRARIES( pthread)
+else()
+     # else section.
+	message("building to pc")
+endif()
+	LINK_LIBRARIES( pthread)
+
+add_executable(net2spi mnetprotocol.cpp mnet.cpp mspi.cpp  mthread.cpp mcontrol.cpp main.cpp)
+
+install(TARGETS net2spi RUNTIME DESTINATION bin)

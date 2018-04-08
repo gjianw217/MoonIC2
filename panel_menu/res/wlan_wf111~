@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# manage network interfaces and configure some networking options
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+if ! [ -x /sbin/ifup ]; then
+    exit 0
+fi
+
+do_wlan0_up(){
+  if [ ! -f %DRV% ];
+  then
+	echo "%DRV% no driver!"
+	return 1	
+  fi
+    insmod %DRV%
+	sleep 3
+	ifconfig wlan0 up
+	iwconfig wlan0 essid MCTEST	
+	sleep 2
+	udhcpc -b -i wlan0
+	return 0
+}
+
+do_wlan0_down(){
+	ifconfig wlan0 down
+	rmmod unifi_sdio.ko
+}
+case "$1" in
+    start)
+		do_wlan0_up
+		;;
+    stop)
+		do_wlan0_down
+		;;
+    force-reload|restart)
+        echo -n "Reconfiguring wlan0 interfaces... "
+		do_wlan0_down
+		sleep 2
+		do_wlan0_up
+	echo "done."
+	;;
+    *)
+	echo "Usage: /etc/init.d/wlan0 {start|stop|restart|force-reload}"
+	exit 1
+	;;
+esac
+
+exit 0
+

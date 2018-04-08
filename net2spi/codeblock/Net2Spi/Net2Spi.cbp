@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Net2Spi" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Net2Spi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Net2Spi" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../../Makefile" />
+		<Unit filename="../../main.cpp" />
+		<Unit filename="../../mconfig.h" />
+		<Unit filename="../../mcontrol.cpp" />
+		<Unit filename="../../mcontrol.h" />
+		<Unit filename="../../mmodflash.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../../mmodflash.h" />
+		<Unit filename="../../mnet.cpp" />
+		<Unit filename="../../mnet.h" />
+		<Unit filename="../../mnet_p.h" />
+		<Unit filename="../../mnetprotocol.cpp" />
+		<Unit filename="../../mnetprotocol.h" />
+		<Unit filename="../../mspi.cpp" />
+		<Unit filename="../../mspi.h" />
+		<Unit filename="../../mthread.cpp" />
+		<Unit filename="../../mthread.h" />
+		<Unit filename="mmodflash.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
